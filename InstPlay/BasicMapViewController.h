@@ -7,4 +7,5 @@
 @property(strong, nonatomic) NSNumber* longitude;
 @property(strong, nonatomic) NSString* titleFeed;
 @property(strong, nonatomic) NSString* detailFeed;
+@property(strong, nonatomic) NSString* urlImage;
 @end

@@ -9,7 +9,7 @@
 @implementation BasicMapViewController
 {
     GMSMarker *feedMarker;
-    UIImageView* imageView;
+    UIView* view;
 }
 
 - (void)viewDidLoad {
@@ -26,9 +26,50 @@
     feedMarker.map = mapView;
     NSLog(@"feedMarker: %@", feedMarker);
     
-    imageView = [[UIImageView alloc] init];
-    NSString *your_url = @"https://instagramimages-a.akamaihd.net/profiles/profile_249677730_75sq_1370676158.jpg";
+    view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 330.0, 120.0)];
+    CALayer *gradient = [CALayer layer];
+    gradient.frame = view.bounds;
+    gradient.borderColor = [[UIColor blackColor] CGColor];
+    gradient.borderWidth = 2;
+    gradient.cornerRadius = 5;
+    gradient.masksToBounds = YES;
+    gradient.backgroundColor = [[UIColor whiteColor] CGColor];
+    [view.layer insertSublayer:gradient atIndex:0];
+    
+    CALayer *avatar = [CALayer layer];
+    avatar.frame = CGRectMake(8, 8, 104.0, 104.0);
+    avatar.borderColor = [[UIColor brownColor] CGColor];
+    avatar.borderWidth = 4;
+    //gradient.cornerRadius = 5;
+    //gradient.masksToBounds = YES;
+    //gradient.backgroundColor = [[UIColor whiteColor] CGColor];
+    [view.layer insertSublayer:avatar atIndex:1];
+ 
+    
+    UIImageView* imageView =  [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 100.0, 100.0)];
+    
+    
+   // [imageView setImage:[UIImage imageNamed:@"sm006.png"]];
+    NSString *your_url = self.urlImage;
     imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL   URLWithString:your_url]]];
+    
+    [view addSubview:imageView];
+    
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(120, 0, 200.0, 40.0)] ;
+    title.text = self.titleFeed;
+    [title setFont:[UIFont systemFontOfSize:20]];
+    //title.numberOfLines = 0;
+    //title.lineBreakMode = NSLineBreakByWordWrapping;
+    [view addSubview:title];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(120, 30, 200.0, 40.0)] ;
+    label.text = self.detailFeed;
+    [label setFont:[UIFont systemFontOfSize:15]];
+    label.numberOfLines = 0;
+    label.lineBreakMode = NSLineBreakByWordWrapping;
+    [view addSubview:label];
+    
     
     self.view = mapView;
     mapView.delegate = self;
@@ -38,7 +79,7 @@
 
 - (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker {
     if (marker == feedMarker) {
-        return imageView;
+        return view;
     }
     return nil;
 }

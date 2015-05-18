@@ -77,6 +77,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary* location =[data objectForKey:@"location"];
     NSDictionary* user =[data objectForKey:@"user"];
     NSDictionary* caption = [data objectForKey:@"caption"];
+    NSDictionary* images = [data objectForKey:@"images"];
 
     BasicMapViewController *controller =
     [[BasicMapViewController alloc] init];
@@ -92,9 +93,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             controller.titleFeed = @"";
         
         if(caption != [NSNull null])
-            controller.detailFeed = [NSString stringWithFormat: @"%@", [caption objectForKey:@"text"]];
+            controller.detailFeed = [caption objectForKey:@"text"];
         else
             controller.detailFeed = @"";
+        
+        if(images != [NSNull null])
+            controller.urlImage = [[images objectForKey:@"thumbnail"] objectForKey:@"url"];
+        else
+            controller.urlImage = @"";
         
         controller.title = @"Map";
         
