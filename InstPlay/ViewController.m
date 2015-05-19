@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 #import "FeedsViewController.h"
+#import "FullMapViewController.h"
 
 
 
@@ -100,10 +101,10 @@
     NSLog(@"loadRequestForMediaData 333");
     NSLog(@"Response : %@",dictResponse);
     
-    FeedsViewController *controller =
-    [[FeedsViewController alloc] init];
+    FullMapViewController *controller =
+    [[FullMapViewController alloc] init];
     controller.data = [dictResponse objectForKey:@"data"];
-    controller.title = @"Feeds";
+    controller.title = @"Map";
     [self.navigationController pushViewController:controller animated:YES];
 
 }

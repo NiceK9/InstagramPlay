@@ -34,6 +34,7 @@
 		F7CC942B1B086EE000666FE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CC942A1B086EE000666FE5 /* Images.xcassets */; };
 		F7CC942E1B086EE000666FE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CC942C1B086EE000666FE5 /* LaunchScreen.xib */; };
 		F7CC943A1B086EE100666FE5 /* InstPlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CC94391B086EE100666FE5 /* InstPlayTests.m */; };
+		F7F90FB71B0BBB5900D8CA79 /* FullMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F90FB61B0BBB5900D8CA79 /* FullMapViewController.m */; };
 		F7F982021B08DCB400E6ADA7 /* FeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F982011B08DCB400E6ADA7 /* FeedsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,8 @@
 		F7CC94331B086EE000666FE5 /* InstPlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstPlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CC94381B086EE000666FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CC94391B086EE100666FE5 /* InstPlayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstPlayTests.m; sourceTree = "<group>"; };
+		F7F90FB51B0BBB5900D8CA79 /* FullMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullMapViewController.h; sourceTree = "<group>"; };
+		F7F90FB61B0BBB5900D8CA79 /* FullMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullMapViewController.m; sourceTree = "<group>"; };
 		F7F982001B08DCB400E6ADA7 /* FeedsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedsViewController.h; sourceTree = "<group>"; };
 		F7F982011B08DCB400E6ADA7 /* FeedsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +168,8 @@
 				F760C6EA1B09018600DC17FC /* BasicMapViewController.h */,
 				F760C6EB1B09018600DC17FC /* BasicMapViewController.m */,
 				F7F982001B08DCB400E6ADA7 /* FeedsViewController.h */,
+				F7F90FB51B0BBB5900D8CA79 /* FullMapViewController.h */,
+				F7F90FB61B0BBB5900D8CA79 /* FullMapViewController.m */,
 				F7F982011B08DCB400E6ADA7 /* FeedsViewController.m */,
 				F7CC94211B086EE000666FE5 /* AppDelegate.h */,
 				F7CC94221B086EE000666FE5 /* AppDelegate.m */,
@@ -326,6 +331,7 @@
 				F7CC94231B086EE000666FE5 /* AppDelegate.m in Sources */,
 				F7F982021B08DCB400E6ADA7 /* FeedsViewController.m in Sources */,
 				F760C6EC1B09018600DC17FC /* BasicMapViewController.m in Sources */,
+				F7F90FB71B0BBB5900D8CA79 /* FullMapViewController.m in Sources */,
 				F7CC94201B086EE000666FE5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
